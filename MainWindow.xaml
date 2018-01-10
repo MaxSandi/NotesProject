@@ -28,8 +28,8 @@
             </Viewbox>
             <Image Source="{Binding ImageNote}"/>
         </StackPanel>
-        <Button Content="Старт" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="4,5,4,6" Height="20"/>
-        <Button Content="Стоп" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="4,5,4,6" Height="20"/>
-        <Button Content="Настройки" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Margin="4,5,4,6" Height="20"/>
+        <Button Content="Старт" Command="{Binding StartCommand}"  HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Margin="4,5,4,6" Height="20"/>
+        <Button Content="Стоп" Command="{Binding StopCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="1" Margin="4,5,4,6" Height="20"/>
+        <Button Content="Настройки" Command="{Binding OptionsCommand}" HorizontalAlignment="Stretch" VerticalAlignment="Center" Grid.Row="1" Grid.Column="3" Margin="4,5,4,6" Height="20"/>
     </Grid>
 </Window>
