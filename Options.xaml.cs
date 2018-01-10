@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NotesProject.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace NotesProject
 {
     /// <summary>
@@ -19,9 +21,15 @@ namespace NotesProject
     /// </summary>
     public partial class Options : Window
     {
-        public Options()
+        public Options(OptionsViewModel viewModel)
         {
             InitializeComponent();
+            this.DataContext = viewModel;
+        }
+
+        private void OKButton_Click(object sender, RoutedEventArgs e)
+        {
+            DialogResult = true;
         }
     }
 }

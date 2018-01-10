@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Command;
 using NotesProject.Model;
 using System;
+using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
@@ -127,7 +128,9 @@ namespace NotesProject.ViewModel
                   ?? (_optionsCommand = new RelayCommand(
                     () =>
                     {
-
+                        Options optionsView = new Options(new OptionsViewModel());
+                        optionsView.Owner = Application.Current.MainWindow;
+                        optionsView.ShowDialog();
                     }, () => !isProcessing));
             }
         }

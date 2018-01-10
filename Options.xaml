@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotesProject"
         mc:Ignorable="d"
-        Title="Настройки" Height="342" Width="300">
+        Title="Настройки" Height="342" Width="300" WindowStartupLocation="CenterOwner">
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="246*"/>
@@ -17,15 +18,15 @@
                     <StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
                             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Время перехода к след. элементу" VerticalAlignment="Center"/>
-                            <TextBox HorizontalAlignment="Right" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="50"/>
+                            <TextBox HorizontalAlignment="Right" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="{Binding TimeDelayNextElem}" VerticalAlignment="Center" Width="50"/>
                             <TextBlock HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" Text="мс" VerticalAlignment="Center"/>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" Margin="10,10,0,0">
                             <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Время показа картинки" VerticalAlignment="Center"/>
-                            <TextBox HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="51"/>
+                            <TextBox HorizontalAlignment="Left" Margin="15,0,0,0" Height="23" TextWrapping="Wrap" Text="{Binding TimeDelayShowImage}" VerticalAlignment="Center" Width="51"/>
                             <TextBlock HorizontalAlignment="Left" Margin="5,0,0,0" TextWrapping="Wrap" Text="мс" VerticalAlignment="Center"/>
                         </StackPanel>
-                        <CheckBox Content="Использовать описание" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                        <CheckBox Content="Использовать описание" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" IsChecked="{Binding ShowDescription, Mode=TwoWay}"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
@@ -36,7 +37,7 @@
                 <Grid Background="#FFE5E5E5"/>
             </TabItem>
         </TabControl>
-        <Button Content="ОК" HorizontalAlignment="Right" Margin="0,5,70,0" Grid.Row="1" VerticalAlignment="Top" Width="49"/>
-        <Button Content="Отмена" HorizontalAlignment="Right" Margin="0,5,0,0" Grid.Row="1" VerticalAlignment="Top" Width="55"/>
+        <Button Content="ОК" IsDefault="True" Click="OKButton_Click" Command="{Binding OkCommand}" HorizontalAlignment="Right" Margin="0,5,75,0" Grid.Row="1" VerticalAlignment="Top" Width="49"/>
+        <Button Content="Отмена" IsCancel="True" HorizontalAlignment="Right" Margin="0,5,5,0" Grid.Row="1" VerticalAlignment="Top" Width="55"/>
     </Grid>
 </Window>
