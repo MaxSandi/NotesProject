@@ -7,7 +7,7 @@
         mc:Ignorable="d ignore"
         Height="408.78"
         Width="426.483"
-        Title="MVVM Light Application"
+        Title="Notes Helper"
         DataContext="{Binding Main, Source={StaticResource Locator}}">
 
     <Grid x:Name="LayoutRoot">
