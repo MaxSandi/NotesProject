@@ -3,8 +3,12 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
-# User-specific files
-*.suo
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.obj
+*.exe
+*.pdb
 *.user
 *.userosscache
 *.sln.docstates
@@ -48,6 +52,9 @@ project.fragment.lock.json
 artifacts/
 **/Properties/launchSettings.json
 
+*.aps
+*.pch
+*.vspscc
 *_i.c
 *_p.c
 *_i.h
@@ -60,11 +67,16 @@ artifacts/
 *.pgd
 *.rsp
 *.sbr
+*.ncb
+*.suo
 *.tlb
 *.tli
 *.tlh
 *.tmp
 *.tmp_proj
+*.bak
+*.cache
+*.ilk
 *.log
 *.vspscc
 *.vssscc
@@ -100,6 +112,12 @@ $tf/
 *.gpState
 
 # ReSharper is a .NET coding add-in
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
 _ReSharper*/
 *.[Rr]e[Ss]harper
 *.DotSettings.user
