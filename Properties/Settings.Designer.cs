@@ -58,5 +58,77 @@ namespace NotesProject.Properties {
                 this["showNoteDescription"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useNotes {
+            get {
+                return ((bool)(this["useNotes"]));
+            }
+            set {
+                this["useNotes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useDiezNotes {
+            get {
+                return ((bool)(this["useDiezNotes"]));
+            }
+            set {
+                this["useDiezNotes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useBemolNotes {
+            get {
+                return ((bool)(this["useBemolNotes"]));
+            }
+            set {
+                this["useBemolNotes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useChords {
+            get {
+                return ((bool)(this["useChords"]));
+            }
+            set {
+                this["useChords"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useMajorTriad {
+            get {
+                return ((bool)(this["useMajorTriad"]));
+            }
+            set {
+                this["useMajorTriad"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool useMinorTriad {
+            get {
+                return ((bool)(this["useMinorTriad"]));
+            }
+            set {
+                this["useMinorTriad"] = value;
+            }
+        }
     }
 }

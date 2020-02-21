@@ -31,10 +31,26 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Ноты">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <CheckBox Content="Использовать ноты" IsChecked="{Binding UseNotes, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <GroupBox Header="Ноты" HorizontalAlignment="Left" Height="216" Margin="10,30,0,0" VerticalAlignment="Top" Width="266">
+                        <StackPanel>
+                            <CheckBox Content="диезы" IsChecked="{Binding UseDiezNotes, Mode=TwoWay}" IsEnabled="{Binding UseNotes}" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <CheckBox Content="бемоли" IsChecked="{Binding UseBemolNotes, Mode=TwoWay}" IsEnabled="{Binding UseNotes}" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
             </TabItem>
             <TabItem Header="Аккорды">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <CheckBox Content="Использовать аккорды" IsChecked="{Binding UseChords, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                    <GroupBox Header="Аккорды" HorizontalAlignment="Left" Height="216" Margin="10,30,0,0" VerticalAlignment="Top" Width="266">
+                        <StackPanel>
+                            <CheckBox Content="мажорные трезвучия" IsChecked="{Binding UseMajorTriad, Mode=TwoWay}" IsEnabled="{Binding UseChords}" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                            <CheckBox Content="минорные трезвучия" IsChecked="{Binding UseMinorTriad, Mode=TwoWay}" IsEnabled="{Binding UseChords}" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                        </StackPanel>
+                    </GroupBox>
+                </Grid>
             </TabItem>
         </TabControl>
         <Button Content="ОК" IsDefault="True" Click="OKButton_Click" Command="{Binding OkCommand}" HorizontalAlignment="Right" Margin="0,5,75,0" Grid.Row="1" VerticalAlignment="Top" Width="49"/>

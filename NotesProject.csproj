@@ -131,6 +131,81 @@
   <ItemGroup>
     <Resource Include="Resources\main.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_A_diez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_C_diez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_D_diez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_F_diez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_G_diez.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_A.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Am.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_B.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Bm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_C.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Cm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Dm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_E.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Em.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_F.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Fm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_G.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chord_Gm.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

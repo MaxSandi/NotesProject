@@ -54,11 +54,26 @@ namespace NotesProject.ViewModel
             timerShowNextElem = new DispatcherTimer();
             timerShowNextElem.Tick += (sender, args) =>
             {
-                currentNote = _notesDictionary.GetRandomNote();
-                TextNote = currentNote.Name;
-                ImageNote = null;
+                try
+                {
+                    currentNote = _notesDictionary.GetRandomNote();
+                    TextNote = currentNote.Name;
+                    ImageNote = null;
 
-                timerShowNoteImage.Start();
+                    timerShowNoteImage.Start();
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+
+                    timerShowNextElem.Stop();
+                    timerShowNoteImage.Stop();
+
+                    isProcessing = false;
+                    _startCommand.RaiseCanExecuteChanged();
+                    _stopCommand.RaiseCanExecuteChanged();
+                    _optionsCommand.RaiseCanExecuteChanged();
+                }
             };
 
             timerShowNoteImage = new DispatcherTimer();
@@ -130,7 +145,9 @@ namespace NotesProject.ViewModel
                     {
                         Options optionsView = new Options(new OptionsViewModel());
                         optionsView.Owner = Application.Current.MainWindow;
-                        optionsView.ShowDialog();
+                        if (optionsView.ShowDialog() == true)
+                            _notesDictionary.Update();
+
                     }, () => !isProcessing));
             }
         }
